@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodge the Bugs Game</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c3e50;
+        }
+        canvas {
+            border: 2px solid #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = 500;
+
+        const player = { x: canvas.width / 2, y: canvas.height - 50, width: 50, height: 50, color: '#f39c12' };
+        const bugs = [];
+        let score = 0;
+        let gameRunning = true;
+        let spawnInterval = 1000; // Initial spawn interval
+        let bugSpeed = 3; // Initial bug speed
+
+        function spawnBug() {
+            if (!gameRunning) return;
+            
+            // Increase difficulty by spawning multiple bugs
+            const bugCount = Math.floor(Math.random() * 3) + 1; // Spawn 1 to 3 bugs at once
+            for (let i = 0; i < bugCount; i++) {
+                bugs.push({ 
+                    x: Math.random() * canvas.width, 
+                    y: -50, 
+                    width: 30, 
+                    height: 30, 
+                    color: '#e74c3c', 
+                    speed: bugSpeed + Math.random() * 2
+                });
+            }
+
+            // Decrease the spawn interval over time to increase difficulty
+            spawnInterval = Math.max(500, spawnInterval - 50); // Minimum interval of 500ms
+            setTimeout(spawnBug, spawnInterval);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') player.x -= 20;
+            if (e.key === 'ArrowRight') player.x += 20;
+            player.x = Math.max(0, Math.min(canvas.width - player.width, player.x));
+        });
+
+        function checkCollision(a, b) {
+            return a.x < b.x + b.width &&
+                   a.x + a.width > b.x &&
+                   a.y < b.y + b.height &&
+                   a.y + a.height > b.y;
+        }
+
+        function update() {
+            if (!gameRunning) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = player.color;
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+
+            for (let i = 0; i < bugs.length; i++) {
+                const bug = bugs[i];
+                bug.y += bug.speed;
+                ctx.fillStyle = bug.color;
+                ctx.fillRect(bug.x, bug.y, bug.width, bug.height);
+
+                if (checkCollision(player, bug)) {
+                    gameRunning = false;
+                    alert(`Game Over! Your score: ${score}`);
+                    document.location.reload();
+                }
+
+                if (bug.y > canvas.height) {
+                    bugs.splice(i, 1);
+                    i--;
+                }
+            }
+
+            score += 1;
+            ctx.fillStyle = '#ecf0f1';
+            ctx.font = '20px Arial';
+            ctx.fillText(`Score: ${score}`, 10, 30);
+
+            // Gradually increase difficulty by speeding up the bugs as score increases
+            if (score % 100 === 0 && bugSpeed < 10) {
+                bugSpeed += 0.5; // Increase bug speed by 0.5 every 100 points
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        spawnBug();
+        update();
+    </script>
+</body>
+</html>
