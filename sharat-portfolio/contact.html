@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sharat S Unnithan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Sharat S Unnithan</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+                    <label for="dark-mode-toggle" class="toggle-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="toggle-ball"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">Let's discuss your next project</p>
+        </div>
+    </section>
+
+    <!-- Interactive Skill Matcher -->
+<section class="skill-matcher section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Do We Fit?</h2>
+            <p class="section-subtitle">Take this quick quiz to see if we're the right match for your project</p>
+        </div>
+
+        <div class="matcher-container">
+            <!-- Progress Bar -->
+            <div class="matcher-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">Question <span id="current-question">1</span> of 5</div>
+            </div>
+
+            <!-- Quiz Container -->
+            <div class="quiz-container" id="quiz-container">
+                <!-- Questions will be injected here by JavaScript -->
+            </div>
+
+            <!-- Results Container (Hidden Initially) -->
+            <div class="results-container" id="results-container" style="display: none;">
+                <div class="results-header">
+                    <h3>Your Project Match Results</h3>
+                    <p>Based on your answers, here's how we can work together</p>
+                </div>
+                
+                <div class="match-score" id="match-score">
+                    <!-- Score will be injected here -->
+                </div>
+
+                <div class="recommendations" id="recommendations">
+                    <!-- Recommendations will be injected here -->
+                </div>
+
+                <div class="next-steps" id="next-steps">
+                    <!-- Next steps will be injected here -->
+                </div>
+
+                <div class="results-actions">
+    <button class="btn btn-secondary" id="retake-quiz">
+        <i class="fas fa-redo"></i> Retake Quiz
+    </button>
+    <button class="btn btn-primary" id="get-recommendation">
+    <i class="fas fa-envelope"></i> Get Detailed Recommendations
+</button>
+</div>
+            </div>
+        </div>
+    </div>
+</section>  
+
+    <!-- Contact Section -->
+    <section class="contact section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="contact-description">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you need a website, mobile app, or consultation, feel free 
+                        to reach out and I'll get back to you as soon as possible.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>sharatsunnithan3@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 9061378596</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Alappuzha,Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+    </section>
+
+    <!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-container">
+            <div class="map-content">
+                <h3>My Location</h3>
+                <p>Based in Alappuzha, Kerala - Serving clients worldwide</p>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.611547878211!2d76.50728447455838!3d9.18946778645739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b061df23627ffed%3A0xface6d85bd3ad22d!2sSharat%20S%20Unnithan%20Anayadiyil%20Kalabhavan%20peringala%20P.%20O%20Kayamkukam!5e0!3m2!1sen!2sin!4v1760196858200!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="location-info">
+                    <div class="location-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Alappuzha, Kerala</strong>
+                            <p>Known as the Venice of the East</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Remote Work Ready</strong>
+                            <p>Available for projects worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .map-section {
+        padding: 4rem 0;
+        background: var(--bg-light);
+    }
+    
+    .map-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .map-content {
+        text-align: center;
+    }
+    
+    .map-content h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+    
+    .map-content > p {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .map-wrapper {
+        border-radius: var(--border-radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        margin-bottom: 2rem;
+        border: 1px solid var(--border-color);
+    }
+    
+    .map-wrapper iframe {
+        display: block;
+        border: none;
+    }
+    
+    .location-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .location-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: var(--bg-color);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+        text-align: left;
+        transition: var(--transition);
+    }
+    
+    .location-item:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+    }
+    
+    .location-item i {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+    }
+    
+    .location-item strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+        font-size: 1.1rem;
+    }
+    
+    .location-item p {
+        margin: 0;
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+    
+    /* Dark mode support */
+    [data-theme="dark"] .map-wrapper {
+        border-color: var(--border-color);
+    }
+    
+    [data-theme="dark"] .location-item {
+        background: var(--bg-dark);
+        border-color: var(--border-color);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .map-section {
+            padding: 3rem 0;
+        }
+        
+        .map-content h3 {
+            font-size: 1.75rem;
+        }
+        
+        .map-wrapper iframe {
+            height: 300px;
+        }
+        
+        .location-info {
+            grid-template-columns: 1fr;
+        }
+        
+        .location-item {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .map-wrapper iframe {
+            height: 250px;
+        }
+        
+        .location-item {
+            padding: 1rem;
+        }
+    }
+</style>
+
+    <!-- FAQ Section -->
+<section class="faq section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about working with me</p>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-title">How long does a typical project take?</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Project timelines vary based on complexity and scope. A simple website 
+                        might take 2-4 weeks, while a complex web application could take 2-4 months. 
+                        I provide detailed timelines during our initial consultation.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-title">Do you work with clients remotely?</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, I work with clients from all over the world. I use modern 
+                        collaboration tools to ensure smooth communication and project 
+                        management regardless of location.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-title">What is your payment structure?</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        I typically work with a 50% deposit to start the project, 25% upon 
+                        milestone completion, and 25% upon final delivery. For larger projects, 
+                        we can discuss custom payment plans.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-title">Do you provide ongoing support?</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, I offer various support and maintenance packages to ensure your 
+                        project continues to perform optimally after launch. These include 
+                        security updates, performance monitoring, and feature enhancements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* FAQ Styles with CSS Variables for Dark/Light Mode */
+.faq {
+    background: var(--bg-light, #f8f9fa);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-color, #ffffff);
+    border-radius: var(--border-radius, 12px);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color, #e9ecef);
+    box-shadow: var(--shadow, 0 4px 20px rgba(0, 0, 0, 0.08));
+    transition: var(--transition, all 0.3s ease);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-lg, 0 10px 40px rgba(0, 0, 0, 0.12));
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    background: var(--bg-color, #ffffff);
+}
+
+.faq-question:hover {
+    background: var(--bg-light, #f8f9fa);
+}
+
+.faq-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color, #333333);
+    margin: 0;
+    flex: 1;
+}
+
+.faq-question i {
+    color: var(--primary-color, #6C63FF);
+    transition: var(--transition, all 0.3s ease);
+    margin-left: 1rem;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition, all 0.3s ease);
+    background: var(--bg-color, #ffffff);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: var(--text-light, #666666);
+    line-height: 1.6;
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .faq {
+    background: var(--bg-dark, #1E1E1E);
+}
+
+[data-theme="dark"] .faq-item {
+    background: var(--bg-color, #121212);
+    border-color: var(--border-color, #404040);
+}
+
+[data-theme="dark"] .faq-question {
+    background: var(--bg-color, #121212);
+}
+
+[data-theme="dark"] .faq-question:hover {
+    background: var(--bg-dark, #1E1E1E);
+}
+
+[data-theme="dark"] .faq-title {
+    color: var(--text-color, #FFFFFF);
+}
+
+[data-theme="dark"] .faq-answer p {
+    color: var(--text-light, #B0B0B0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 1.25rem;
+    }
+    
+    .faq-title {
+        font-size: 1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 1.25rem 1.25rem;
+    }
+}
+</style>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sharat S Unnithan</h3>
+                    <p class="footer-description">
+                        Full-stack developer creating digital experiences that make an impact.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/SHARAT-S-UNNITHAN" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">App Development</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> sharatsunnithan3@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9061378596</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Alappuzha,Kerala</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sharat S Unnithan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    
+</body>
+</html>
